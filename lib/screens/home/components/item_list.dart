@@ -1,3 +1,4 @@
+import 'package:fastFood/screens/details/details-screen.dart';
 import 'package:fastFood/screens/home/components/item_card.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,12 @@ class ItemList extends StatelessWidget {
             title: 'Beer & Burger',
             svgSrc: 'assets/icons/burger_beer.svg',
             shopName: 'MacDonalds',
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DetailsScreen()),
+              );
+            },
           ),
           ItemCard(
             title: 'Chinese & Noodles',
