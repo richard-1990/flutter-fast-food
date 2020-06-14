@@ -1,14 +1,19 @@
 import 'package:fastFood/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 AppBar homeAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
-    leading: IconButton(
-      icon: SvgPicture.asset("assets/icons/menu.svg"),
-      onPressed: () {},
+    leading: RotatedBox(
+      quarterTurns: 2,
+      child: IconButton(
+        color: ksecondaryColor,
+        icon: FaIcon(FontAwesomeIcons.alignRight),
+        onPressed: () {},
+      ),
     ),
     title: Center(
       child: RichText(
@@ -31,7 +36,8 @@ AppBar homeAppBar(BuildContext context) {
     ),
     actions: <Widget>[
       IconButton(
-        icon: SvgPicture.asset("assets/icons/notification.svg"),
+        color: ksecondaryColor,
+        icon: FaIcon(FontAwesomeIcons.bell),
         onPressed: () {},
       )
     ],
