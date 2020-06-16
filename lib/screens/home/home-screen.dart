@@ -13,9 +13,30 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: homeAppBar(context),
-      bottomNavigationBar: BottomNavBar(),
-      body: Body(),
-    );
+        appBar: homeAppBar(context),
+        bottomNavigationBar: BottomNavBar(),
+        body: Body(),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Text('Drawer Header',
+                    style: TextStyle(color: Colors.white)),
+                decoration: BoxDecoration(
+                  color: kPrimaryColor,
+                ),
+              ),
+              ListTile(
+                title: Text('List Item 1'),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text('Item 2'),
+                onTap: () {},
+              ),
+            ],
+          ),
+        ));
   }
 }
